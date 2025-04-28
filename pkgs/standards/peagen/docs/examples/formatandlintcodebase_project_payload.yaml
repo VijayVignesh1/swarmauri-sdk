@@ -1,0 +1,38 @@
+PROJECTS:
+  - NAME: "FormatAndLintCodebaseTool"
+    ROOT: "pkgs/community"
+    TEMPLATE_SET: "componentv1"
+    EXTRAS:
+      REQUIREMENTS:
+        - "Implement a tool to automatically format and lint a codebase to ensure consistency and compliance with coding standards."
+
+    PACKAGES:
+      #-----------------------------------------------------
+      # 1) swarmauri_tool_formatandlintcodebase
+      #-----------------------------------------------------
+      - NAME: "swarmauri_tool_formatandlintcodebase"
+        TEMPLATE_SET_OVERRIDE: "componentv1"
+        EXTRAS:
+          AUTHORS:
+            - "Vijay Vignesh Prasad Rao"
+          PURPOSE: "Implement a tool to automatically format and lint a codebase."
+          DESCRIPTION: "Formats the codebase to ensure consistency with coding standards."
+          REQUIREMENTS:
+            - "Use popular linters and formatters for supported languages (e.g., ESLint, Prettier, Black)."
+            - "Provide options for configuration and customization."
+            - "Include a preview of changes before applying them to the codebase."
+
+        MODULES:
+          - NAME: "FormatAndLintCodebaseTool"
+            EXTRAS:
+              PURPOSE: "Formats the codebase to ensure consistency and compliance with the coding standards."
+              DESCRIPTION: "Automatically formats the given codebase to ensure consistency with coding standards."
+              REQUIREMENTS:
+                - "Use popular linters and formatters for supported languages (e.g., ESLint, Prettier, Black)."
+                - "Provide options for configuration and customization."
+                - "Include a preview of changes before applying them to the codebase."
+              RESOURCE_KIND: "tools"
+              BASE_NAME: "ToolBase"
+              BASE_FILE: "base/swarmauri_base/tools/ToolBase.py"
+              EXAMPLES:
+              - "swarmauri_standard/swarmauri_standard/tools/AutomatedReadabilityIndexTool.py"
